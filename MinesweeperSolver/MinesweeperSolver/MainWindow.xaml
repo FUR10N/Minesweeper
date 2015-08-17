@@ -1,0 +1,42 @@
+﻿<Window x:Class="MinesweeperSolver.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="521" Width="935">
+
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="10">
+        <Button Name="btnStart" Content="Start" Width="140" HorizontalAlignment="Left" 
+                Click="btnStart_Click"/>
+            <CheckBox Content="Auto-Guess" VerticalAlignment="Center" Margin="10,0,0,0" Name="chkAutoGuess" />
+        </StackPanel>
+        <ScrollViewer>
+            <StackPanel>
+                <TextBlock Name="txtProgress" Margin="10" />
+                <DockPanel>
+                    <StackPanel Orientation="Vertical" DockPanel.Dock="Top">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox Name="txtCoordX" Width="100" Text="0" />
+                            <TextBox Name="txtCoordY" Width="100" Text="0" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox Name="txtX" Width="100" Text="0" />
+                            <TextBox Name="txtY" Width="100" Text="0" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="12">
+                            <Button Name="btnPart" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="450,0,0,0" Click="Button_Click_2" Content="Part" />
+                            <TextBlock Name="txtPixel" Margin="20,0,0,0" Width="130" />
+                        </StackPanel>
+                    </StackPanel>
+                    <ContentControl Name="fullImage" HorizontalAlignment="Left" VerticalAlignment="Stretch" DockPanel.Dock="Left" Width="450">
+                        <TextBlock Name="txtBoard" FontFamily="Consolas" Margin="10" />
+                    </ContentControl>
+                    <ContentControl Name="imagePart" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" DockPanel.Dock="Left">
+                        <Image Name="imgPart" Margin="10" />
+                    </ContentControl>
+
+                </DockPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </DockPanel>
+
+</Window>
